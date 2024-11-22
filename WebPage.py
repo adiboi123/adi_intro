@@ -8,6 +8,7 @@ import streamlit as st
 from PIL import Image
 from pdf2image import convert_from_path
 
+
 # Page Configuration
 st.set_page_config(
     page_title="Personal Website",
@@ -81,12 +82,9 @@ elif selection == "Projects":
         - Utilized the **Seisbench** python library to find out P- and S- phase picks for earthquake data captured in NE India
         - Implemented well-regarded Deep-Learning based phase-picking techniques: **EQTransformer** gave much better results""")
     pdf_path="Trial_Picks.pdf"
-    doc = fitz.open(pdf_path)
-    page_num = st.slider("Page Number:", 4, len(doc)) - 2 # User selects page (1-based index)
-    page = doc[page_num]
-    pix = page.get_pixmap()
-    img_bytes = pix.tobytes("png")
-    st.image(img_bytes, caption=f"Page {page_num + 1}", use_column_width=True)
+    doc = convert_from_path(pdf_path, dpi=200)
+    page_num = st.slider("Page Number:", 3, 8) - 1 # User selects page (1-based index)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
     st.markdown(
         """
         *Challenges faced*:
@@ -113,12 +111,9 @@ elif selection == "Projects":
         - Create Power Spectral Densities from noise data collected from NE India
         - Pre-processing sequences implemented: Instrument Corrections, Detrending, Normalization, Decimation""")
     pdf_path="psdpdf.pdf"
-    doc = fitz.open(pdf_path)
-    page_num = st.slider("Page Number:", 5, 10) - 2 # User selects page (1-based index)
-    page = doc[page_num]
-    pix = page.get_pixmap()
-    img_bytes = pix.tobytes("png")
-    st.image(img_bytes, caption=f"Page {page_num + 1}", width=500)
+    doc = convert_from_path(pdf_path, dpi=200)
+    page_num = st.slider("Page Number:", 5, 10) - 1 # User selects page (1-based index)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
     st.markdown("""
         - Fixing errors in PSD observed due to improper pre-processing techniques""")
     
