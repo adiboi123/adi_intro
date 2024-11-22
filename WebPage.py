@@ -6,7 +6,7 @@
 
 import streamlit as st
 from PIL import Image
-import pymupdf as fitz
+import fitz
 
 # Page Configuration
 st.set_page_config(
