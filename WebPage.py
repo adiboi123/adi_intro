@@ -38,7 +38,7 @@ if selection == "Biography":
         
         **Location:** Kolkata, India 
         
-       I am currently pursuing an Integrated Master of Technology in Applied Geophysics at IIT (ISM) Dhanbad, where I am in the final year of my           studies. I have had the opportunity to intern at ExxonMobil BTC (India), where I worked on evaluating the feasibility and validity of direct
+       I am currently pursuing an Integrated Master of Technology in Applied Geophysics at IIT (ISM) Dhanbad, where I am in the final year of my           study. I have had the opportunity to intern at ExxonMobil BTC (India), where I worked on evaluating the feasibility and validity of direct
        4D deterministic inversion. In addition, I am a Student Researcher at the Subsurface Resource Characterization Group (sRCg) at IIT(ISM). My         research interests revolve around seismology and seismic inversion, and I am currently working on denoising seismological signals using
        Stochastic Differential Equations under the guidance of Prof. Mohit Agrawal. My specific interests include: photonic seismology (DAS), time-
        lapse seismic, seismic tomography, geophysical inverse problems & signal processing.
