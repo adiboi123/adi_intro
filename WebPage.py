@@ -30,7 +30,7 @@ def display_section(title, content):
 if selection == "Biography":
     st.title("Biography")
     img = Image.open("IMG.001.png")
-    st.image(img, use_column_width=True)
+    st.image(img, use_container_width=True)
     display_section(
         "About Me",
         """
@@ -52,7 +52,7 @@ elif selection == "Internships":
     pdf_path="Internship_Summary_Aditya.pdf"
     doc = convert_from_path(pdf_path, dpi=400)
     page_num = st.slider("Page Number:", 1, len(doc)) - 1 # User selects page (1-based index)
-    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_container_width=True)
 
 # Projects Section
 elif selection == "Projects":
@@ -61,7 +61,7 @@ elif selection == "Projects":
     You can view and interact with my projects below.
     """)
     st.subheader("Coal-Fire Simulations:")
-    st.image("FFF.gif", caption="Learning ANSYS", use_column_width=True)
+    st.image("FFF.gif", caption="Learning ANSYS", use_container_width=True)
     st.markdown(
         """
         *Learnings*:
@@ -84,7 +84,7 @@ elif selection == "Projects":
     pdf_path="Trial_Picks.pdf"
     doc = convert_from_path(pdf_path, dpi=200)
     page_num = st.slider("Page Number:", 3, 8) - 1 # User selects page (1-based index)
-    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_container_width=True)
     st.markdown(
         """
         *Challenges faced*:
@@ -98,8 +98,8 @@ elif selection == "Projects":
         - Signal processing-based techniques that can be implemented to denoising seismic signals
         - Metrics to denoise seismological signals
         - Data pre-processing techniques for seismological signals (ObsPy functionalities)""")
-    st.image("Sumatra_Denoised.png", caption="Demonstration of denoising algorithms to denoise the data for the Sumatra earthquake: (a) Teager-Kaiser Energy Operator Denoising, (b) Savitzky-Golay Filtering, (c) Kalman Filtering, (d) Daubechies Wavelet-based denoising, (e) Symlet Wavelet-based denoising" , use_column_width=True)
-    st.image("Denoise_Metrics.png", caption="Various denoising metrics and their efficacy for the 2000 Sumatra earthquake" , use_column_width=True)
+    st.image("Sumatra_Denoised.png", caption="Demonstration of denoising algorithms to denoise the data for the Sumatra earthquake: (a) Teager-Kaiser Energy Operator Denoising, (b) Savitzky-Golay Filtering, (c) Kalman Filtering, (d) Daubechies Wavelet-based denoising, (e) Symlet Wavelet-based denoising" , use_container_width=True)
+    st.image("Denoise_Metrics.png", caption="Various denoising metrics and their efficacy for the 2000 Sumatra earthquake" , use_container_width=True)
     st.text("Click below to check out some of the self-coded denoising algorithms I have implemented in my thesis work")
     st.markdown("""[View Notebook](https://nbviewer.org/github/adiboi123/deciphering-seismology/blob/main/Denoising/Example.ipynb)""")
     
@@ -113,7 +113,7 @@ elif selection == "Projects":
     pdf_path="psdpdf.pdf"
     doc = convert_from_path(pdf_path, dpi=200)
     page_num = st.slider("Page Number:", 5, 10) - 1 # User selects page (1-based index)
-    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_container_width=True)
     st.markdown("""
         - Fixing errors in PSD observed due to improper pre-processing techniques""")
     
