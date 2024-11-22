@@ -6,7 +6,7 @@
 
 import streamlit as st
 from PIL import Image
-import fitz
+from pdf2image import convert_from_path
 
 # Page Configuration
 st.set_page_config(
@@ -49,12 +49,9 @@ elif selection == "Internships":
     st.title("Internships")
     st.subheader("Internship Summary: ExxonMobil BTC")
     pdf_path="Internship_Summary_Aditya.pdf"
-    doc = fitz.open(pdf_path)
+    doc = convert_from_path(pdf_path, dpi=400)
     page_num = st.slider("Page Number:", 1, len(doc)) - 1 # User selects page (1-based index)
-    page = doc[page_num]
-    pix = page.get_pixmap()
-    img_bytes = pix.tobytes("png")
-    st.image(img_bytes, caption=f"Page {page_num + 1}", width=500)
+    st.image(doc[page_num], caption=f"Page {page_num+1}", use_column_width=True)
 
 # Projects Section
 elif selection == "Projects":
