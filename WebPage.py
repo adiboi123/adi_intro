@@ -89,7 +89,8 @@ elif selection == "Projects":
         """
         *Challenges faced*:
         - Improper parameterization of the PhaseNet model might have led to inaccurate picks
-        - Lesser wiggle room due to rigid syntaxes of the Seisbench framework""")
+        - Lesser wiggle room due to rigid syntaxes of the Seisbench framework
+        """)
     
     st.subheader("Thesis Updates: Seismological Signal Denoising")
     st.markdown(
