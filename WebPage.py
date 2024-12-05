@@ -112,7 +112,7 @@ elif selection == "Projects":
         - Pre-processing sequences implemented: Instrument Corrections, Detrending, Normalization, Decimation""")
     pdf_path="psdpdf.pdf"
     doc = convert_from_path(pdf_path, dpi=200)
-    page_num = st.slider("Page Number:", 5, 10) - 1 # User selects page (1-based index)
+    page_num = st.slider("Page Number:", 5, 7) - 1 # User selects page (1-based index)
     st.image(doc[page_num], caption=f"Page {page_num+1}", use_container_width=True)
     st.markdown("""
         - Fixing errors in PSD observed due to improper pre-processing techniques""")
