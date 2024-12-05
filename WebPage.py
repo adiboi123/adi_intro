@@ -89,7 +89,7 @@ elif selection == "Projects":
         """
         *Challenges faced*:
         - Improper parameterization of the PhaseNet model might have led to inaccurate picks
-        - Lesser wiggle room fue to rigid syntaxes of the Seisbench framework""")
+        - Lesser wiggle room due to rigid syntaxes of the Seisbench framework""")
     
     st.subheader("Thesis Updates: Seismological Signal Denoising")
     st.markdown(
@@ -152,10 +152,11 @@ elif selection == "Accolades":
     st.title("Accolades")
     st.markdown(
         """
-        - Recipent of the 2024 SPWLA Foundation Scholarship
-        - Recipent of the 2024 SEG SLS Chevron Travel Grant (IMAGE'24)
+        - Recipient of the 2024 SPWLA Foundation Scholarship
+        - Recipient of the 2024 SEG SLS Chevron Travel Grant (IMAGE'24)
         - Top Scorer of Applied Geophysics, Integrated M.Tech. batch of 2025 (CGPA: 8.54/10.00)
-        - Winner of the SEG Challenge Bowl Asia Pacific Regionals and runner-up (2nd) in the SEG Challenge Bowl World Finals
+        - Winner of the SEG Challenge Bowl Asia Pacific Regionals and runner-up (1st) in the SEG Challenge Bowl World Finals
+        - Boeing BUILD 2.0 Regional Finalist
         """)
 
 # Footer
